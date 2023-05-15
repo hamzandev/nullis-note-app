@@ -1,6 +1,6 @@
 "use client";
 import {useState} from "react"
-import {createTask} from "@/utils/tasks.server"
+// import {createTask} from "@/utils/tasks.server"
 import { IoClose } from "react-icons/io5"
 import { BsPlusCircle } from "react-icons/bs"
 
@@ -18,7 +18,7 @@ export default function AddModal() {
 				<span>Tambah Tugas</span>
 			</button>
 			<div className={`absolute ${modal ? 'min-h-screen' : 'max-h-0'} duration-200 overflow-hidden inset-0 bg-zinc-800/90 z-10 flex items-center justify-center`}>
-				<form action={createTask} className="grid gap-4 my-10 md:mx-auto mx-5 md:w-4/12 w-full border border-slate-600 relative bg-slate-900 hover:border-slate-500 group p-6 rounded-2xl">
+				<form className="grid gap-4 my-10 md:mx-auto mx-5 md:w-4/12 w-full border border-slate-600 relative bg-slate-900 hover:border-slate-500 group p-6 rounded-2xl">
 					<span onClick={()=> setModal(prev => !prev)} className="absolute cursor-pointer -right-2 -top-2 font-mono w-8 h-8 flex items-center justify-center rounded-full bg-rose-500 block">
 						<IoClose />
 					</span>
