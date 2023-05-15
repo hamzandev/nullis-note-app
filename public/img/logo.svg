@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="83" height="83" viewBox="0 0 83 83">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.852" y1="0.06" x2="0.088" y2="0.969" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#374c8d"/>
+      <stop offset="1" stop-color="#273475"/>
+      <stop offset="1" stop-color="#04d28c"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-355 -271)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="83" height="83" rx="26" transform="translate(355 271)" fill="url(#linear-gradient)"/>
+    <path id="Path_5" data-name="Path 5" d="M33.5,33.588c.81-11.74-1.893-40,0-38.864S50.283,28.812,46.336,40.957s-31.184,1.134-33.077,0S32.691,45.328,33.5,33.588Z" transform="translate(389.842 273.572) rotate(45)" fill="#fff"/>
+    <path id="Path_6" data-name="Path 6" d="M28.742,24.5c.62-9-1.451-30.65,0-29.781S41.6,20.837,38.578,30.144s-23.9.869-25.347,0S28.121,33.494,28.742,24.5Z" transform="translate(381.261 270.341) rotate(45)" fill="#e8e8e8"/>
+    <path id="Path_7" data-name="Path 7" d="M25.432,18.175c.489-7.088-1.143-24.148,0-23.463s10.132,20.58,7.749,27.912-18.827.684-19.97,0S24.943,25.263,25.432,18.175Z" transform="translate(375.293 265.463) rotate(45)" fill="#d4d4d4"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="8.5" cy="8.5" r="8.5" transform="translate(407 323)" fill="#3bff9d"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li::marker {
+        content: "😎 ";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Javascript</li>
+      <li>PHP</li>
+      <li>Java</li>
+    </ul>
+
+    <script>
+      let arr = [1, , 3, 4, ["a", , "c", "d", ["*", , "#"]], 5];
+
+      console.log("Flatten : ", arr.flat(2));
+    </script>
+  </body>
+</html>
