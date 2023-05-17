@@ -1,26 +1,32 @@
 "use client";
-import { useState } from "react";
-import { createTask as buatTask } from "@/utils/tasks.server";
-import { IoClose } from "react-icons/io5";
-import { BsPlusCircle } from "react-icons/bs";
-import ButtonLoading from "@/components/ButtonLoading";
+import { useState, useRef } from "react";
+import { Task } from "@prisma/client";
 
-export default function AddModal() {
+import { IoClose } from "react-icons/io5";
+import { BsPlusCircle, BsPencil } from "react-icons/bs";
+
+import { createTask as buatTask } from "@/utils/tasks.server";
+
+export default function EditModal({ task }: { task: Task }) {
   const [modal, setModal] = useState(false);
+  const taskData = useRef({
+    name: task.title,
+    description: task.description,
+    updatedAt: task.updatedAt,
+  });
 
   return (
     <>
       <button
         onClick={() => setModal((prev) => !prev)}
-        className="px-6 py-2  flex items-center gap-2 rounded-lg active:outline active:scale-95 outline-slate-500 duration-200 bg-gray-900 border border-slate-700 hover:border-slate-500"
+        className="w-8 h-8 flex items-center justify-center p-1 hover:border-slate-500 duration-200 rounded-full border border-slate-700"
       >
-        <BsPlusCircle />
-        <span>Buat Tugas</span>
+        <BsPencil />
       </button>
       <div
-        className={`absolute overflow-hidden ${
-          modal ? "h-screen" : "max-h-0"
-        } duration-200 overflow-hidden inset-0 bg-zinc-800/90 z-10 flex items-center justify-center`}
+        className={`absolute w-screen -inset-x-[50vw] -inset-y-[25vh] ${
+          modal ? "min-h-screen" : "max-h-0"
+        } duration-200 overflow-hidden inset-0 bg-zinc-800/90 z-50 flex items-center justify-center`}
       >
         <form
           action={buatTask}
@@ -35,7 +41,7 @@ export default function AddModal() {
           <h1 className="md:text-2xl text-xl font-bold">
             Buat Jadwal Tugas Baru
           </h1>
-
+          <input name="id" type="hidden" />
           <input
             name="title"
             type="text"
@@ -50,7 +56,9 @@ export default function AddModal() {
             cols={5}
             placeholder="Deskripsi Tugas"
           ></textarea>
-          <ButtonLoading type="submit" label="Simpan Tugas Baru" />
+          <button className="py-2 rounded-lg bg-gradient-to-tr from-indigo-500 to-blue-600">
+            Simpan Tugas
+          </button>
         </form>
       </div>
     </>
